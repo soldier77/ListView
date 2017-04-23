@@ -15,10 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Sun_IntroduceActivity" />
-        <activity android:name=".Jiang_IntroduceActivity" />
-        <activity android:name=".Mao_IntroduceActivity" />
-        <activity android:name=".Deng_IntroduceActivity"></activity>
+        <activity android:name=".Person_IntroduceActivity"></activity>
     </application>
 
 </manifest>

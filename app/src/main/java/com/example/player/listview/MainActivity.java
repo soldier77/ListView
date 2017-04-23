@@ -46,19 +46,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent,View view,int position,long id){
                 Person person = persons.get(position);
-                Intent intent = new Intent(MainActivity.this,Sun_IntroduceActivity.class);
+                Intent intent = new Intent(MainActivity.this,Person_IntroduceActivity.class);
+                String name = new String("none");
                 if(person.getName().equals("孙中山")) {
-                    intent = new Intent(MainActivity.this,Sun_IntroduceActivity.class);
+                    name = new String("孙中山");
                 }
                 if(person.getName().equals("蒋介石")) {
-                    intent = new Intent(MainActivity.this,Jiang_IntroduceActivity.class);
+                    name = new String("蒋介石");
                 }
                 if(person.getName().equals("毛泽东")) {
-                    intent = new Intent(MainActivity.this,Mao_IntroduceActivity.class);
+                    name = new String("毛泽东");
                 }
                 if(person.getName().equals("邓小平")) {
-                    intent = new Intent(MainActivity.this,Deng_IntroduceActivity.class);
+                    name = new String("邓小平");
                 }
+                intent.putExtra("name",name);
                 startActivity(intent);
                 return true;
             }
